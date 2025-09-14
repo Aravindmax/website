@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* enables smooth scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3em 8%; /* spacing inside navbar */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(205, 205, 205, 0.3);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Desktop nav-links using padding instead of gap */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  font-size: larger;
+}
+
+.navbar .nav-links li {
+  padding: 0 1.5em; /* horizontal spacing between links */
+}
+
+.navbar .nav-links li a {
+  color: #434343;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ff5858;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+/* ----------------------------------------------------------courasel Styles -------------------------------------------------------------*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  touch-action: pan-y;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height:90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.text-box {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.text-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: orange;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+  position: absolute;
+  top: 57%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.74);
+  color: rgba(0, 0, 0, 0.57);
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Dots */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: orange;
+}
+
+/* -------------------------------------------------Welcome - Section------------------------------------------------------- */
+
+
+
+.welcome-logo {
+  margin-top: 5%;
+  width: 30%;
+  height: auto;
+}
+
+.welcome-container{
+  display: flex;
+  justify-content:center;
+  padding: 5%;
+}
+.welcome-container-card{
+  text-align: justify;
+  width: 25em;
+  font-size: x-large;
+  font-weight: 200;
+  line-height: 1.6em;
+  color: #3c3c3c;
+  margin-right: 4%;
+}
+.welcome-button{
+  background-color: orange;
+  border: none;
+  padding: 1em .5em;
+  border-radius: 1.2em;
+  width: 12em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  font-size: .7em;
+  font-weight: 600;
+}
+.welcome-button a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.welcome-image{
+  width: 35em;
+  border-radius: 2em;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 4%;
+}
+
+/* -------------------------------------------------Contact container - Section------------------------------------------------------- */
+
+.contact-box{
+  width: 60%;
+}
+
+.contact-container{
+  background-color: #075a87;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 0%;
+  padding: 2%;
+  text-align: center;
+}             
+
+.contact-container h3{
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.contact-container p{
+  color: white;
+  font-size: 1.3em;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 2em;
+  line-height: 1.6em;
+} 
+
+.contact-button{
+  background-color: orange;
+  border: none;
+  padding: 1em .5em;
+  border-radius: 1.2em;
+  margin-top: 1em;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 24%;
+  margin-bottom: 2em;
+}
+.contact-button a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------footer - Section------------------------------------------------------- */
+
+.footer{
+    display: flex;
+    background-color: #292d3e;
+    padding: 20px;
+    width: 100%;
+    left: 0%;
+    margin-top: 0px;
+    height: auto;
+    justify-content: space-evenly;
+}
+.footer-card{
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 3%;
+    list-style: none;
+    color: white;
+}
+.footer-links,a{
+    color: #cfd2dd;
+    text-decoration: none;
+    list-style: none;
+    padding: 1%;
+    font-weight: 100;
+}
+
+.footer-decoration{
+  display: flex; 
+  margin: 6%;
+  
+}
+
+.footer-decoration-style-left{
+  border: 3px solid rgb(255, 0, 0);
+  width: 50%;
+  margin-right: 3%;
+  margin-left: 0%;
+}
+.footer-decoration-style-right{
+  border: 3px solid rgb(255, 183, 0);
+  width: 50%;
+  margin-left: 3%;
+  margin-right: 0%;
+}
+
+.footer-decoration-contact{
+  display: flex; 
+  margin: 3%;
+}
+.footer-decoration-contact-left{
+  border: 3px solid rgb(255, 0, 0);
+  width: 25%;
+  margin-right: 1%;
+  margin-left: 0%;
+}
+.footer-decoration-contact-right{
+  border: 3px solid rgb(255, 183, 0);
+  width: 25%;
+  margin-left: 2%;
+  margin-right: 0%;
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .carousel {
+  height: 60vh;
+  touch-action: pan-y;
+  align-items: center;
+  display: flex;
+  }
+
+  .carousel button {
+    display: none;  /* completely hides */
+    /* or use: pointer-events: none; opacity: 0.5; if you want disabled look */
+  }
+
+  .slide {
+  min-width: 100%;
+  height:90vh;
+  margin-top: 15%;
+  }
+
+  .text-box{
+    height: 23em;
+  }
+
+  .dots{
+    bottom: .3em;
+  }
+
+  /*--------------hamburger Menu--------*/
+  .hamburger {
+    display: block;
+    color: #ff5858;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: -100%; /* hidden by default */
+    width: 100%;
+    flex-direction: column;
+    background-color: #ffeeee;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin-top: 5%;       /* no extra margin between items */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* subtle separator */
+    font-size: 18px; /* mobile-friendly size */
+    padding: 50px;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links li:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* subtle hover */
+
+  }
+
+  .nav-links.active {
+    right: 0; /* show menu */
+  }
+
+  .welcome-logo {
+  margin-top: 10%;
+  width: 55%;
+  }
+  .welcome-container{
+  flex-direction:column-reverse ;
+  align-items: center;
+  }
+  .welcome-container-card{
+    width: 95%;
+    font-size:large;
+    margin-top: 2.7em;
+    margin-right: 0%;
+
+  }
+
+  .welcome-mobile-box{
+    text-align: center;
+  }
+  .welcome-button{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .9em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  
+  .welcome-image{
+    width: 90%;
+    margin-top: 1em;
+  }
+
+
+  /*----------------------footer----------------------*/
+  .footer{
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    padding: 2.2em;
+  
+  }
+  .footer-card{
+    font-size: 1.3em;
+    width: auto;
+  }
+
+  .footer-decoration{ 
+  display: flex; 
+  margin: 1%;
+  margin-top: 3%;
+  }
+
+  .footer-decoration-style-left{
+    border: 3px solid rgb(255, 0, 0);
+    width: 15%;
+    margin-right: 1%;
+    margin-left: 2%;
+  }
+  .footer-decoration-style-right{
+    border: 3px solid rgb(255, 183, 0);
+    width: 15%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .footer-decoration-contact{
+    display: flex; 
+    margin: 1%;
+    margin-top: 3%;
+  }
+  .footer-decoration-contact-left{
+    border: 3px solid rgb(255, 0, 0);
+    width: 15%;
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+  .footer-decoration-contact-right{
+    border: 3px solid rgb(255, 183, 0);
+    width: 15%;
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+
+
+
+  .contact-box{
+  width: 90%;
+  }
+
+  .contact-button{
+    width: 50%;
+    
+  }
+  
+}
+
